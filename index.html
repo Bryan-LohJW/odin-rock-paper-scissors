@@ -14,9 +14,9 @@
             return choice;
         }
 
-        function playRound(playerChoice, getComputerChoice) {
+        function playRound(playerChoice, choice=choices) {
             const player = playerChoice.toLowerCase();
-            const computer = getComputerChoice.toLowerCase();
+            const computer = getComputerChoice(choice).toLowerCase();
 
             if(player == computer) {
                 return "It's a tie";
