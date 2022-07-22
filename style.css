@@ -1,0 +1,54 @@
+.container {
+    border: 5px solid #7c627c; 
+    background-color: rgba(28, 19, 109, 0.993);
+}
+
+.screen {
+    margin: 10rem;
+
+    border: 10px solid white;
+    border-radius: 20px;
+    
+    background-color: lightgray;
+    backface-visibility: ;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.top {
+    display: flex;
+    justify-content: center;
+}
+
+.middle {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.bottom {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+button {
+    width: 300px;
+    height: 30px;
+    margin: 5rem;
+
+    background-color: purple;
+    font-size: large;
+    font-weight: bolder;
+    color:red;
+    border: 3px solid red;
+    border-radius: 5px;
+}
+
+p {
+    font-size: 20px;
+}
