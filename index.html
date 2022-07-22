@@ -114,18 +114,12 @@
         const round = document.querySelector('#round');
         const player = document.querySelector('#player');
         const computer = document.querySelector('#computer');
-        console.log(result);
-        //console.log(buttons);
         buttons.forEach((button) => {
             button.addEventListener('click',(e) => {
                 result.textContent = `${playRound(e.target.id)}`; //shows what is the result of the round and adds score
-                
                 resultCheck(result);
                 nextRound(round);
-                console.log(result.textContent);
-
             });
         })
-        round.addEventListener()
     </script>
 </html>
