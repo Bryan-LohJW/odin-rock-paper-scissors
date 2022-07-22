@@ -2,15 +2,35 @@
 <html lang="en">
     <head>
         <meta charset="utf-8"/>
+        <link href="style.css" rel="stylesheet"/>
     </head>
     <body>
-        <button id="rock">Rock</button>
-        <button id="paper">Paper</button>
-        <button id="scissors">Scissors</button>
-        <p id="result"></p>
-        <p id="round">0</p>
-        <p id="computer">0</p>
-        <p id="player">0</p>
+        <div class="container">
+            <div class="screen">
+                <div class="top">
+                    <p id="result">Welcome, click a button to start</p>
+                </div>
+                <div class="middle">
+                    <p class="round">Round</p>
+                    <p id="round">0</p>
+                </div>
+                <div class="bottom">
+                    <p class="label">Computer: </p>
+                    <p id="computer">0</p>
+                    <p class="label">Player: </p>
+                    <p id="player">0</p>
+                </div>
+                
+            </div>
+            <div class="choices">
+                <button id="rock">Rock</button>
+                <button id="paper">Paper</button>
+                <button id="scissors">Scissors</button>
+            </div>
+            
+            
+        </div>
+        
         
     </body>
     <script>
@@ -65,22 +85,27 @@
         const nextRound = function(round) {
             round.textContent = Number(round.textContent) + 1;
             if (round.textContent == "5") {
+                const timeToReset = 3000
                 const playerScore = Number(player.textContent);
                 const computerScore = Number(computer.textContent);
                 const end = function(playerScore, computerScore) {
                     if (playerScore > computerScore) {
-                        alert("Match over, player win");
+                        result.textContent=  "Match over, player win";
+                        setTimeout (reset, timeToReset);
                     } else if (playerScore < computerScore) {
-                        alert("Match over, computer win");
+                        result.textContent = "Match over, computer win";
+                        setTimeout (reset, timeToReset);
                     } else {
-                        alert("Match over, its a tie");
+                        result.textContent = "Match over, its a tie";
+                        setTimeout (reset, timeToReset);
                     }
                 }
+                const reset = function() {
+                    round.textContent = 0;
+                    player.textContent = 0;
+                    computer.textContent =0;
+                }
                 end(playerScore, computerScore);
-                round.textContent = 0;
-                player.textContent = 0;
-                computer.textContent =0;
-                result.textContent = "";
             }
         }
 
