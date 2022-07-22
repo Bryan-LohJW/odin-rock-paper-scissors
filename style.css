@@ -1,10 +1,15 @@
+body {
+    margin:0;
+    color: white;
+}
+
 .container {
     border: 5px solid #7c627c; 
     background-color: rgba(28, 19, 109, 0.993);
 }
 
 .screen {
-    margin: 10rem;
+    margin: 2rem 2rem 4rem ;
 
     border: 10px solid white;
     border-radius: 20px;
@@ -38,8 +43,8 @@
 
 button {
     width: 300px;
-    height: 30px;
-    margin: 5rem;
+    padding: 1rem 0;
+    margin: 0rem 1rem 5rem;
 
     background-color: purple;
     font-size: large;

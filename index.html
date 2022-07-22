@@ -45,22 +45,22 @@
             const player = playerChoice.toLowerCase();
             const computer = getComputerChoice(choice).toLowerCase();
             
-            if(player == computer) {
+            if(player === computer) {
                 return "It's a tie";
-            } else if (player == "rock") {
-                if (computer == "paper") {
+            } else if (player === "rock") {
+                if (computer === "paper") {
                     return `You lose, ${computer} beats ${player}.`;
                 } else {
                     return `You win, ${player} beats ${computer}.`;
                 }
-            } else if (player == "paper") {
-                if (computer == "scissors") {
+            } else if (player === "paper") {
+                if (computer === "scissors") {
                     return `You lose, ${computer} beats ${player}.`;
                 } else {
                     return `You win, ${player} beats ${computer}.`;
                 }
-            } else if (player == "scissors") {
-                if (computer == "rock") {
+            } else if (player === "scissors") {
+                if (computer === "rock") {
                     return `You lose, ${computer} beats ${player}.`;
                 } else {
                     return `You win, ${player} beats ${computer}.`;
@@ -84,7 +84,7 @@
         //function that add and check round
         const nextRound = function(round) {
             round.textContent = Number(round.textContent) + 1;
-            if (round.textContent == "5") {
+            if (round.textContent === "5") {
                 const timeToReset = 3000
                 const playerScore = Number(player.textContent);
                 const computerScore = Number(computer.textContent);
